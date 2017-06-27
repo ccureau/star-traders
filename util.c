@@ -8,16 +8,16 @@
 #include "globals.h"
 #include "types.h"
 
-void center(unsigned char x, const char *str)
+void center(UCHAR x, const char *str)
 {
-  unsigned char xpos = (x>>1) - (strlen(str)>>1);
+  UCHAR xpos = (x>>1) - (strlen(str)>>1);
   gotox(xpos);
   printf(str);
 }
 
 void populate_map() {
-  unsigned char x = 0;
-  unsigned char y;
+  UCHAR x = 0;
+  UCHAR y;
 
   srand(time(NULL));
   for (; x < MAP_MAX_ROWS; ++x) {
@@ -33,14 +33,18 @@ void populate_map() {
 
 void draw_map()
 {
-  unsigned char x = 0;
-  unsigned char y;
+  UCHAR x = 0;
+  UCHAR y;
 
   clrscr();
   center(scr_max_x, "MAP OF THE GALAXY\n");
-  center(scr_max_x, "*******************\n");
+  center(scr_max_x, "*******************\n\n");
+
+  // draw header
+  printf("   A  B  C  D  E  F  G  H  I  J  K  L\n");
 
   for (; x < MAP_MAX_ROWS; ++x) {
+    cprintf(" %d ", x+1);
     for (y=0; y < MAP_MAX_COLS; ++y) {
       switch(map[x][y]) {
         case EMPTY: cputc('.'); break;
@@ -60,9 +64,9 @@ void draw_map()
 
 void get_moves()
 {
-  unsigned char c = 0;
-  unsigned char x;
-  unsigned char y;
+  UCHAR c = 0;
+  UCHAR x;
+  UCHAR y;
 
   for (; c < 5; ++c) {
     x = rand() % MAP_MAX_ROWS + 1;
