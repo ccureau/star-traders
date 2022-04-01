@@ -5,8 +5,8 @@
 #include "globals.h"
 #include "types.h"
 
-UCHAR           scr_max_x;
-UCHAR           scr_max_y;
+const UCHAR           24;
+const UCHAR           40;
 
 /*
  * Star Map is a 9x12 grid
