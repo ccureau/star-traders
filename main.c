@@ -11,7 +11,7 @@
 void main()
 {
   setup();
-  center(scr_max_x, "S T A R  T R A D E R S !");
+  center(scr_max_x, "S T A R  T R A D E R S");
   draw_map();
 }
 
