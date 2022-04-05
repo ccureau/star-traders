@@ -72,7 +72,6 @@ void get_moves()
     x = rand() % MAP_MAX_ROWS + 1;
     y = rand() % MAP_MAX_COLS + 1;
 
-
   }
 
 
