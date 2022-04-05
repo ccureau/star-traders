@@ -21,5 +21,4 @@ extern map_objects            map[MAP_MAX_ROWS][MAP_MAX_COLS];
 
 extern UCHAR                  valid_moves[10];
 
-
 #endif
