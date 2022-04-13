@@ -1,5 +1,5 @@
 /*
- *
+ * Star Traders
  */
 
 #include <conio.h>
